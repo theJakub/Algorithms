@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithm 1</title>
+</head>
+<body>
+	<!-- Given a string, for example, “Hello World”, write some code to reverse that string (“dlroW olleH”). 
+	(Hint: try using the Array.reverse() method! But, if you do, try solving it just using looping as well). -->
+
+	<div id="output1"></div> <!-- these two divs are so I can see my answers in the web browser. -->
+	<div id="output2"></div>
+	<script>
+
+		//This is using the .reverse() method.
+		var string1 = "The Stuff and Things!";
+		var arr1 = string1.split("");
+		var arr2 = arr1.reverse();
+		var reverse1 = arr2.join("");
+		console.log(reverse1);
+		document.getElementById("output1").innerHTML = "The Stuff and Things! "+reverse1;// this is so the answer will be in the web browser
+
+		//This is how I did it with a loop
+		var string2 = "Some other Stuff and Things";
+		var arr3 = string2.split("");
+		var arrL = arr3.length;
+		var arr4 = [];
+
+		for(i = 0;i < arrL; i++){
+			var element = arr3.pop();
+			arr4.push(element);
+		}
+		
+		var reverse2 = arr4.join("");
+		console.log(reverse2);
+		document.getElementById("output2").innerHTML = "Some other Stuff and Things "+reverse2;// this is so the answer will be in the web browser.
+
+	</script>
+</body>
+</html>

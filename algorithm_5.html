@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithm 5</title>
+</head>
+<body>
+	<!-- Write a guessing game using looping and prompts!
+	Have the user come up with a number between 1 and 100 (inclusive), but not enter it into the computer. Have the computer guess numbers in that same range, and ask the user if that is the number (e.g. “Is 40 your number?”). You can use prompt text (propmt("is 40 your number")) to accomplish this. If the number is too high, have the user enter “H”. If the number is too low, have the user enter “L”. If the computer guessed the number, have the user enter “Y”, and start a new game. Can you write an efficient algorithm so that the computer will find your number in the minimum number of guesses? -->
+
+	<script>
+		// This is the original way that I solved this problem. After talking to Erty about it he gave me annother way
+		// The other (quicker) solution is below this one.
+
+		// var i = 0;
+		// while(i<10){
+		// 	prompt("Pick a whole number between 1 and 100. Remeber your number and hit enter.");
+		// 	var range = [-1,101];// low and high guess perameters.
+		// 	var guess = Math.floor((Math.random()*100)+1);
+		// 	var hint = "z";
+		// 	while(hint!="y"){
+		// 		var hint = prompt("Is your number "+guess+"? Put Y for yes. H for too high. L for too low");
+		// 		hint = hint.toLowerCase();
+		// 		if(hint=="h"){
+		// 			range[1]=guess;
+		// 			while(guess>=range[1]||guess<=range[0]){
+		// 				guess=Math.floor((Math.random()*100)+1);
+		// 			}
+		// 		} else if (hint=="l"){
+		// 			range[0]=guess;
+		// 			while(guess>=range[1]||guess<=range[0]){
+		// 				guess=Math.floor((Math.random()*100)+1);
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+
+
+
+		// This is the alternate solution.
+		var i = 0;
+
+		while(i < 10){
+			prompt("Pick a whole number between 1 and 100. Remeber your number and hit enter.");
+			var range = [0,101];
+			var hint = "z";
+
+			while(hint != "y"){
+				var guess = Math.floor((range[0] + range[1]) / 2);
+				var hint = prompt("Is your number " + guess + "? Put Y for yes. H for too high. L for too low");
+				hint = hint.toLowerCase();
+
+				if(hint == "h"){
+					range[1] = guess;
+				} else if (hint == "l"){
+					range[0] = guess;
+				}
+			}
+		}
+
+
+
+
+
+	</script>
+
+</body>
+</html>

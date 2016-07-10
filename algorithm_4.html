@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithm 4</title>
+</head>
+<body>
+	<!-- Write a JavaScript program which prompts the user for a number and console.logs that number as a string with dashes (-) between each two odd digits. For example if the user types 0253697 the output should be “025-369-7”. -->
+	<div id="output"></div> <!-- I wanted the original number and answer on the screen also -->
+	<div id="output2"></div>
+	<script>
+		var num = prompt("Write any whole number");
+		var arr1 = num.split("");
+		var arr2=[];
+		for(i=0;i<arr1.length;i++){
+			if(arr1[i]%2==1&&arr1[i+1]%2==1){
+				arr2.push(arr1[i]);
+				arr2.push("-");
+			}else{
+				arr2.push(arr1[i]);
+			}
+		}
+		var numDash = arr2.join("");
+		console.log(numDash);
+		document.getElementById("output").innerHTML = num;
+		document.getElementById("output2").innerHTML = numDash; // I wanted it to go on the screen also.
+
+	</script>
+</body>
+</html>
