@@ -47,8 +47,7 @@
 
 			while(hint != "y"){
 				var guess = Math.floor((range[0] + range[1]) / 2);
-				var hint = prompt("Is your number " + guess + "? Put Y for yes. H for too high. L for too low");
-				hint = hint.toLowerCase();
+				var hint = prompt("Is your number " + guess + "? Put Y for yes. H for too high. L for too low").toLowerCase();
 
 				if(hint == "h"){
 					range[1] = guess;
