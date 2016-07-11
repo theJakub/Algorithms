@@ -12,15 +12,15 @@
 	<script>
 
 		//This is using the .reverse() method.
-		var string1 = "The Stuff and Things!";
+		var string1 = prompt("Write some text and I'll reverse it with array.reverse()!");
 		var arr1 = string1.split("");
 		var arr2 = arr1.reverse();
 		var reverse1 = arr2.join("");
 		console.log(reverse1);
-		document.getElementById("output1").innerHTML = "The Stuff and Things! "+reverse1;// this is so the answer will be in the web browser
+		document.getElementById("output1").innerHTML = string1 + " " + " " + reverse1;// this is so the answer will be in the web browser
 
 		//This is how I did it with a loop
-		var string2 = "Some other Stuff and Things";
+		var string2 = prompt("Write some text and I'll reverse it with a loop!");
 		var arr3 = string2.split("");
 		var arrL = arr3.length;
 		var arr4 = [];
@@ -32,7 +32,7 @@
 		
 		var reverse2 = arr4.join("");
 		console.log(reverse2);
-		document.getElementById("output2").innerHTML = "Some other Stuff and Things "+reverse2;// this is so the answer will be in the web browser.
+		document.getElementById("output2").innerHTML = string1 + " " + " " + reverse2;// this is so the answer will be in the web browser.
 
 	</script>
 </body>
